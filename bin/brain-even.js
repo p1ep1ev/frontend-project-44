@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
-import greeting from '../src/cli.js';
+// import readlineSync from 'readline-sync';
+// import greeting from '../src/cli.js';
+import gameBody from '../src/gameBody.js';
 
-const playerName = greeting();
+// const playerName = greeting();
 
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function task() {
   const q = Math.round(Math.random() * 100);
@@ -18,24 +19,4 @@ function task() {
   return [q, a];
 }
 
-let mark = 0;
-
-for (let i = 1; i <= 3; i += 1) {
-  const step = task(); // [q, a]
-
-  console.log(`Question: ${step[0]}`);
-  const answer = readlineSync.question('Answer: ');
-
-  if (answer === step[1]) {
-    console.log('Correct!');
-    mark += 1;
-  } else {
-    console.log(`${answer} is wrong answer ;(. Correct answer was ${step[1]}`);
-    console.log(`Let's try again, ${playerName}`);
-    break;
-  }
-}
-
-if (mark === 3) {
-  console.log(`Congratulations, ${playerName}!`);
-}
+gameBody(description, task);
