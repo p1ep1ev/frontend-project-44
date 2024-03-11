@@ -6,7 +6,7 @@ const description = 'Find the greatest common divisor of given numbers.';
 function task() {
   const operand1 = Math.round(Math.random() * 101);
   const operand2 = Math.round(Math.random() * 101);
-  
+
   let a = operand1;
   let b = operand2;
   while (a !== 0 && b !== 0) {
