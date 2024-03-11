@@ -1,22 +1,33 @@
-function task() {
-  const length = Math.floor(Math.random() * 6) + 5;
-  const step = Math.floor(Math.random() * 10) + 1;
-  const hiddenIndex = Math.floor(Math.random() * length);
-  const startNumber = Math.floor(Math.random() * 20) + 1; // Начальное число прогрессии
-  const progression = [];
+const getRandomInt = (max) => Math.floor(Math.random() * max);
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
 
-  for (let i = 0; i < length; i += 1) {
-    progression.push(startNumber + step * i);
+function getTask() {
+  const task = [];
+
+  const strArr = [];
+
+  let number = getRandomInt(100);
+  const number2 = getRandomInt(20);
+
+  const iteration = getRandomArbitrary(5, 10);
+  const indexElement = getRandomArbitrary(1, iteration);
+  for (let i = 0; i <= iteration; i += 1) {
+    strArr.push(number);
+    number += number2;
   }
+  task[1] = strArr[indexElement].toString();
 
-  const hiddenNumber = progression[hiddenIndex];
-  progression[hiddenIndex] = '..';
-  const answer = `${hiddenNumber}`;
-  return [`${progression}`, answer];
+  const result = strArr.join(' ');
+
+  task[0] = result.replace(`${task[1]}`, '..');
+
+  return task;
 }
 
 function description() {
   return 'What number is missing in the progression?';
 }
 
-export { description, task };
+export { description, getTask };
