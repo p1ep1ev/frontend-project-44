@@ -7,23 +7,23 @@ function isPrime(number) {
   return number !== 1;
 }
 
-function getTask() {
-  const task = [];
+function task() {
+  const answer = [];
   const number = getRandomInt(100);
 
-  task[0] = number.toString();
+  answer[0] = number.toString();
 
   if (isPrime(number) === true) {
-    task[1] = 'yes';
+    answer[1] = 'yes';
   } else {
-    task[1] = 'no';
+    answer[1] = 'no';
   }
 
-  return task;
+  return answer;
 }
 
 function description() {
   return 'Answer "yes" if given number is prime. Otherwise answer "no".';
 }
 
-export { description, getTask };
+export { description, task };

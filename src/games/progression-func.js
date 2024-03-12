@@ -3,8 +3,8 @@ function getRandomArbitrary(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-function getTask() {
-  const task = [];
+function task() {
+  const answer = [];
 
   const strArr = [];
 
@@ -17,17 +17,17 @@ function getTask() {
     strArr.push(number);
     number += number2;
   }
-  task[1] = strArr[indexElement].toString();
+  answer[1] = strArr[indexElement].toString();
 
   const result = strArr.join(' ');
 
-  task[0] = result.replace(`${task[1]}`, '..');
+  answer[0] = result.replace(`${answer[1]}`, '..');
 
-  return task;
+  return answer;
 }
 
 function description() {
   return 'What number is missing in the progression?';
 }
 
-export { description, getTask };
+export { description, task };
