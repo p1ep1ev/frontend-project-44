@@ -37,7 +37,7 @@ make brain-progression
 ```
 
 # Аскинема Brain-Even
-[![asciicast](https://asciinema.org/a/f12AWG9dn3zBmCCeE6VOhW9oK.svg)](https://asciinema.org/a/zIjywNab5MuYsPO0MVJBSXLNw)
+[![asciicast](https://asciinema.org/a/f12AWG9dn3zBmCCeE6VOhW9oK.svg)](https://asciinema.org/a/f12AWG9dn3zBmCCeE6VOhW9oK)
 
 # Аскинема Brain-Gcd
 [![asciicast](https://asciinema.org/a/zIjywNab5MuYsPO0MVJBSXLNw.svg)](https://asciinema.org/a/zIjywNab5MuYsPO0MVJBSXLNw)
